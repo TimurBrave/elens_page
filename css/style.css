@@ -34,7 +34,7 @@ p {
 /* HEADER */
 
 .header_body {
-  background-image: url("images/floral_bg.svg");
+  background-image: url("../images/floral_bg.svg");
   height: 44rem;
 }
 
