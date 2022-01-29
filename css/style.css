@@ -1,0 +1,151 @@
+
+/* TAGS */
+body {
+  background-color: #F6F5F5;
+  color: #33313b;
+  margin: 0;
+  font-size: 1rem;
+}
+
+h1 {
+  font-style: normal;
+  font-family: "Montserrat", serif;
+  font-size: 2.3rem;
+  font-weight: 600;
+  margin: 1rem 0 0;
+}
+
+h2 {
+  font-style: normal;
+  font-family: "Montserrat", serif;
+  font-size: medium;
+  font-weight: 600;
+  margin: 0;
+}
+
+p {
+  font-style: normal;
+  font-family: "Montserrat", serif;
+  font-size: medium;
+  font-weight: 400;
+  margin: 0 0 .5rem;
+}
+
+/* HEADER */
+
+.header_body {
+  background-image: url("../images/drawing_2.svg");
+  height: 44rem;
+}
+
+/* Elen's card in header */
+.elens_card_header {
+  display: grid;
+  grid-template-areas: "elens_photo_box" "name_box_header";
+  width: 80%;
+  position: relative;
+  top: 3.75rem;
+  left: 0;
+  margin: 0 10% 0 10%;
+}
+
+/** This settings is for screens bigger then 600px **/
+@media only screen and (min-width: 600px) {
+  .elens_card_header {
+    width: 70%;
+    grid-template-columns: 16rem auto;
+    grid-template-areas: "elens_photo_box name_box_header";
+    grid-gap: 2rem;
+    position: relative;
+    top: 3.75rem;
+    left: 3.75rem;
+    margin: 0;
+  }
+}
+
+/* Elen's photo */
+.elens_photo_box {
+  height: 16rem;
+  width: 16rem;
+  margin: 0;
+  position: relative;
+  grid-area: elens_photo_box;
+}
+
+.elens_photo {
+  height: 16rem;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  position: relative;
+  z-index: 3;
+}
+
+.elens_photo_bg_yellow {
+  height: 16rem;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  background-color: #e3c4a8;
+  position: absolute;
+  top: 0.3rem;
+  left: 0.5rem;
+  z-index: 2;
+}
+
+.elens_photo_bg_blue {
+  height: 16rem;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  background-color: #4592af;
+  position: absolute;
+  top: -0.2rem;
+  left: -0.5rem;
+  z-index: 1;
+}
+
+/* Elen's name card in header */
+.name_box_header {
+    display: flex;
+    align-items: center;
+    grid-area: name_box_header;
+}
+
+/* Short Elen's description */
+
+    /* Description circle decor */
+      .circles-descr_decor {
+        position: absolute;
+        left: 11.75rem;
+        top: 22rem;
+      }
+
+      @media only screen and (max-width: 720px) {
+        .circles-descr_decor {
+          display: none;
+        }
+      }
+
+    .circles_grid {
+      display: grid;
+      grid-template-columns: 1rem;
+      grid-row-gap: .2rem;
+    }
+      .circles_grid>div {
+        width: .8rem;
+        height: .8rem;
+        background-color: #e3c4a8;
+        border-radius: 100%;
+      }
+
+.short_elens_descriprion {
+  width: clamp(45ch, 50%, 75ch);
+  display: inline-block;
+  margin: 6rem auto 0 21.75rem;
+}
+
+@media only screen and (max-width: 720px) {
+  .short_elens_descriprion {
+    width: clamp(45ch, 80%, 75ch);
+    display: inline-block;
+    margin: 6rem auto 0 2rem;
+  }
+}
